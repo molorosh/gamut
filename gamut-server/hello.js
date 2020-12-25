@@ -21,7 +21,7 @@
         'Content-Type': 'text/html; charset=utf-8',
         'Content-Length': content_length,
      });
-     res.end(body);ß
+     res.end(body);
  }
 
  var a = http.createServer(process_request);
