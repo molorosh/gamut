@@ -19,7 +19,7 @@ function read_file_content(req, res, content, filename){
                 res.end(JSON.stringify(content), '\n');
                 return;
             }
-            var buf = new Buffer(1000000);
+            var buf = Buffer.alloc(1000000);
             fs.read(
                 handle, buf, 0, 1000000, null,
                 function(err, length){
@@ -50,6 +50,9 @@ function handle_incoming_request(req, res){
      console.log('INCOMING REQUEST: ' + req.method + ' ' + req.url);
      res.writeHead(200, {'Content-Type': 'application/json'});
      var content = {error: null};
+     content.timestampJson = new Date().toJSON()
+     content.method = req.method;
+     content.url = req.url;
      var isSync = true;
      switch (req.url) {
         case '/':
