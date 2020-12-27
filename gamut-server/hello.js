@@ -4,8 +4,11 @@
  */
 
  var http = require('http');
+ var simpleClass = require('./SimpleClass.js');
 
  function process_request(req, res){
+     const x = new simpleClass();
+     const y = x.theUtcTimestampString();
      var body = '<!DOCTYPE html>\n';
      body += '<html lang="en">\n';
      body += '<head>\n';
@@ -14,6 +17,7 @@
      body += '</head>\n';
      body += '<body>\n';
      body += '<h1>Gamut Backend Server</h1>\n';
+     body += `<p>${y}</p>`
      body += '</body>\n';
      body += '</html>\n';
      var content_length = body.length;
