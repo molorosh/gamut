@@ -4,9 +4,25 @@
     <meta charset="utf-8" />
     <title>Main Page</title>
     <link rel="stylesheet" type="text/css" href="style">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"> /* just an import */ </script>
+    <script src="appCode"> /* just an import */ </script>
 </head>
 <body>
     <h1>Main Page</h1>
     <p>This is the main page.</p>
+    <h2>REST API</h2>
+    <p>key: <input id="idKeyText" type="text"></p>
+    <p>
+      <button id="idBtnGet">GET game/&lt;key&gt;</button>
+      <button id="idBtnPut">PUT game/&lt;key&gt;</button>
+      <button id="idBtnDelete">DELETE game/&lt;key&gt;</button>
+      <button id="idBtnPost">POST game/&lt;key&gt;</button>
+    </p>
+    <script>
+      $( document ).ready(function() {
+        console.log( "(* app code is ready to be run *)" );
+        appCodeReady();
+      });
+    </script>
 </body>
 </html>
