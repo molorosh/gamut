@@ -1,0 +1,36 @@
+{
+    "objectType": "game",
+    "settings": {
+        "objectType": "gameSettings",
+        "gameType": "go",
+        "board-x": 9,
+        "board-y": 9
+    },
+    "id": 1542,
+    "createdUTC": null,
+    "completedUTC": null,
+    "state": null,
+    "currentMove": null,
+    "currentMoveOrder": null,
+    "players": [
+        {
+            "objectType": "player",
+            "uid": "{03eccd60-c824-42db-936f-8cba079f8294}",
+            "nickname": "howard",
+            "moveOrder": 0
+        },
+        {
+            "objectType": "player",
+            "uid": "{6fc918d0-e40b-49d1-bea7-b14c27b0f27a}",
+            "nickname": "rob",
+            "moveOrder": 1
+        }
+    ],
+    "moves":[
+
+    ],
+    "boards":[
+
+    ]
+}
+
