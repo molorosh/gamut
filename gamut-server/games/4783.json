@@ -6,7 +6,7 @@
         "board-x": 9,
         "board-y": 9
     },
-    "id": 1542,
+    "id": 4783,
     "createdUTC": null,
     "completedUTC": null,
     "state": null,
@@ -16,15 +16,15 @@
         {
             "id": 0,
             "objectType": "player",
-            "uid": "{03eccd60-c824-42db-936f-8cba079f8294}",
-            "nickname": "howard",
+            "uid": "{54632d4b-c2a1-4a4a-a665-fc37c2b56f77}",
+            "nickname": "billie",
             "moveOrder": 0
         },
         {
             "id": 1,
             "objectType": "player",
-            "uid": "{6fc918d0-e40b-49d1-bea7-b14c27b0f27a}",
-            "nickname": "rob",
+            "uid": "{ccef31f1-c8ff-43ba-b5aa-373e03b12463}",
+            "nickname": "charlotte",
             "moveOrder": 1
         }
     ],
