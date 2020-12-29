@@ -1,5 +1,6 @@
 /** the javascript app logic */
 
 function appCodeReady() {
-    alert('app code ready');
+    console.log('function appCodeReady() { ... }');
+    console.log('app code ready at ' + new Date().toJSON());
 }
