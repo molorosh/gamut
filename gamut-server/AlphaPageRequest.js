@@ -4,11 +4,12 @@ const { ENGINE_METHOD_CIPHERS } = require('constants');
 
 class AlphaPageRequest{
 
-    constructor(method, url, filename, mimeType){
+    constructor(method, url, filename, mimeType, isText){
         this.method = method;
         this.url = url;
         this.filename = filename;
         this.mimeType = mimeType;
+        this.isText = isText;
         if(this.method === '*' && this.url === '*'){
             this.code = 404;
         }else{
@@ -26,10 +27,10 @@ class AlphaPageRequest{
 
     handleRequest(req, res){
         res.writeHead(this.code, {'Content-Type': this.mimeType});
-        this.read_file_content(req, res, this.filename);
+        this.read_file_content(req, res, this.filename, this.isText);
     }
 
-    read_file_content(req, res, filename){
+    read_file_content(req, res, filename, isText){
         fs.open(
             filename, 'r',
             function(err, handle){
@@ -45,7 +46,12 @@ class AlphaPageRequest{
                             console.log(`error with fs.open`);
                             return;
                         }
-                        res.end(buf.toString('utf8', 0, length), '\n');
+                        if(isText){
+                            res.end(buf.toString('utf8', 0, length), '\n');
+                        }else{
+                            res.write(buf,'binary');
+                            res.end(null, 'binary');
+                        }
                         fs.close(
                             handle, 
                             function(){
