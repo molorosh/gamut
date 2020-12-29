@@ -11,6 +11,8 @@
     <h1>Main Page</h1>
     <p>This is the main page.</p>
     <h2>REST API</h2>
+    <p>usrnm: <input id="idUsernameText" type="text"></p>
+    <p>psswrd: <input id="idPasswordText" type="text"></p>
     <p>key: <input id="idKeyText" type="text"></p>
     <p>
       <button id="idBtnGet">GET /game/&lt;key&gt;</button>
@@ -18,6 +20,8 @@
       <button id="idBtnDelete">DELETE /game/&lt;key&gt;</button>
       <button id="idBtnPost">POST /game/&lt;key&gt;</button>
     </p>
+    <h3>Debug</h3>
+    <pre id="idDebugPre"></pre>
     <script>
       $( document ).ready(function() {
         console.log( "(* app code is ready to be run *)" );
