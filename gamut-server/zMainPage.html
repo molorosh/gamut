@@ -13,7 +13,7 @@
     <h2>REST API</h2>
     <p>usrnm: <input id="idUsernameText" type="text"></p>
     <p>psswrd: <input id="idPasswordText" type="text"></p>
-    <p>key: <input id="idKeyText" type="text"></p>
+    <p>key: <input id="idKeyText" type="text"> <button id="idBtnKeyNew">New Key</button> <button id="idBtnKeyClear">clear</button></p>
     <p>
       <button id="idBtnGet">GET /game/&lt;key&gt;</button>
       <button id="idBtnPut">PUT /game/&lt;key&gt;</button>
@@ -21,6 +21,9 @@
       <button id="idBtnPost">POST /game/&lt;key&gt;</button>
     </p>
     <h3>Debug</h3>
+    <p>
+      <button id="idBtnClear">clear</button>
+    </p>
     <pre id="idDebugPre"></pre>
     <script>
       $( document ).ready(function() {
