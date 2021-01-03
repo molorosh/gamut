@@ -43,7 +43,10 @@ class AlphaRestRequest{
     }
 
     handleRequest(req, res){
+        console.log('handleRequest(req, res)');
         let retVal = this.getRestParts(req.method, req.url);
+        console.log('retVal:');
+        console.log(retVal);
         res.writeHead(200, {'Content-Type': 'application/json'});
         res.end(JSON.stringify({ parts: retVal }), '\n');
     }
